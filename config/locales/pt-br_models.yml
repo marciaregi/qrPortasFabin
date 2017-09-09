@@ -1,0 +1,11 @@
+"pt-BR":
+    activerecord:
+      models:
+        customer: Porta
+        attributes:
+          customer:
+            id: "Identificador"
+            schedule: "Horario de funcionamento"  
+            description: "Nome da porta"
+            number: "Número da sala"
+            created_at: "Criado em"

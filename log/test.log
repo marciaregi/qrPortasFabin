@@ -1,0 +1,122 @@
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "doors"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "doors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "schedule" text, "description" text, "number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170909111925)[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2017-09-09 12:42:43.450452"], ["updated_at", "2017-09-09 12:42:43.450452"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (4.6ms)[0m  [1m[31mDELETE FROM "doors"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "doors" ("schedule", "description", "number", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 1, '2017-09-09 12:42:43.607751', '2017-09-09 12:42:43.607751', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "doors" ("schedule", "description", "number", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 1, '2017-09-09 12:42:43.607751', '2017-09-09 12:42:43.607751', 298486374)[0m
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+DoorsControllerTest: test_should_destroy_door
+---------------------------------------------
+  [1m[36mDoor Load (0.3ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "doors"[0m
+Started DELETE "/doors/980190962" for 127.0.0.1 at 2017-09-09 09:42:44 -0300
+Processing by DoorsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "doors" WHERE "doors"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doors
+Completed 302 Found in 14ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "doors"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+DoorsControllerTest: test_should_update_door
+--------------------------------------------
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/doors/980190962" for 127.0.0.1 at 2017-09-09 09:42:44 -0300
+Processing by DoorsController#update as HTML
+  Parameters: {"door"=>{"description"=>"MyText", "number"=>"1", "schedule"=>"MyText"}, "id"=>"980190962"}
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doors/980190962
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+DoorsControllerTest: test_should_create_door
+--------------------------------------------
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "doors"[0m
+Started POST "/doors" for 127.0.0.1 at 2017-09-09 09:42:44 -0300
+Processing by DoorsController#create as HTML
+  Parameters: {"door"=>{"description"=>"MyText", "number"=>"1", "schedule"=>"MyText"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "doors" ("schedule", "description", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["schedule", "MyText"], ["description", "MyText"], ["number", 1], ["created_at", "2017-09-09 12:42:44.289281"], ["updated_at", "2017-09-09 12:42:44.289281"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doors/980190963
+Completed 302 Found in 12ms (ActiveRecord: 1.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "doors"[0m
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" ORDER BY "doors"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+DoorsControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/doors/980190962/edit" for 127.0.0.1 at 2017-09-09 09:42:44 -0300
+Processing by DoorsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDoor Load (0.6ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering doors/edit.html.erb within layouts/application
+  Rendered doors/_form.html.erb (16.9ms)
+  Rendered doors/edit.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 3016ms (Views: 3014.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+DoorsControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/doors/new" for 127.0.0.1 at 2017-09-09 09:42:47 -0300
+Processing by DoorsController#new as HTML
+  Rendering doors/new.html.erb within layouts/application
+  Rendered doors/_form.html.erb (8.0ms)
+  Rendered doors/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+DoorsControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:42:47 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.6ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+DoorsControllerTest: test_should_show_door
+------------------------------------------
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/doors/980190962" for 127.0.0.1 at 2017-09-09 09:42:47 -0300
+Processing by DoorsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering doors/show.html.erb within layouts/application
+  Rendered doors/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

@@ -1,0 +1,972 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoors (20170909110906)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoors (20170909110906)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoors (20170909110906)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoors (20170909110906)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoors (20170909110906)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoors (20170909110906)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoors (20170909110906)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoors (20170909110906)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoors (20170909111925)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "doors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "schedule" text, "description" text, "number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170909111925"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-09 11:19:39.561482"], ["updated_at", "2017-09-09 11:19:39.561482"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-09-09 08:20:56 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 32ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 08:21:04 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 2161ms (Views: 2150.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/doors/new" for 127.0.0.1 at 2017-09-09 08:21:18 -0300
+Processing by DoorsController#new as HTML
+  Rendering doors/new.html.erb within layouts/application
+  Rendered doors/_form.html.erb (41.3ms)
+  Rendered doors/new.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 223ms (Views: 198.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/doors" for 127.0.0.1 at 2017-09-09 08:21:48 -0300
+Processing by DoorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wd6xMkFtLiHViYifP2CZbtckFInY8NZf1VDTNfC3hB4SxEwf8R6ZaxZAZyV19vdCBI1E3/uTbQzQPOlp9Q2A0g==", "door"=>{"schedule"=>"13 as 14", "description"=>"NTIC", "number"=>"1"}, "commit"=>"Create Door"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "doors" ("schedule", "description", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["schedule", "13 as 14"], ["description", "NTIC"], ["number", 1], ["created_at", "2017-09-09 11:21:48.849243"], ["updated_at", "2017-09-09 11:21:48.849243"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/doors/1
+Completed 302 Found in 25ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/doors/1" for 127.0.0.1 at 2017-09-09 08:21:48 -0300
+Processing by DoorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDoor Load (0.3ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering doors/show.html.erb within layouts/application
+  Rendered doors/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 144ms (Views: 125.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 08:21:54 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 95ms (Views: 93.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 08:24:59 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 106ms (Views: 104.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/doors/1" for 127.0.0.1 at 2017-09-09 08:25:05 -0300
+Processing by DoorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDoor Load (0.3ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering doors/show.html.erb within layouts/application
+  Rendered doors/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 151ms (Views: 131.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 08:25:09 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 111ms (Views: 109.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-09 09:11:40 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (10.0ms)
+Completed 200 OK in 22ms (Views: 18.2ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:11:53 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (4.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (79.9ms)
+Completed 200 OK in 192ms (Views: 184.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:13:16 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (56.1ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.time.formats.default):
+    20:         <td><%= door.schedule %></td>
+    21:         <td><%= door.description %></td>
+    22:         <td><%= door.number %></td>
+    23:         <td><%=l door.created_at %></td>
+    24:         <td>
+    25:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    26:                       door_path(door), :class => 'btn btn-default btn-xs' %>
+  
+app/views/doors/index.html.erb:23:in `block in _app_views_doors_index_html_erb___866523691453752648_38666180'
+app/views/doors/index.html.erb:17:in `_app_views_doors_index_html_erb___866523691453752648_38666180'
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:14:23 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (65.5ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.time.formats.default):
+    20:         <td><%= door.schedule %></td>
+    21:         <td><%= door.description %></td>
+    22:         <td><%= door.number %></td>
+    23:         <td><%=l door.created_at %></td>
+    24:         <td>
+    25:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    26:                       door_path(door), :class => 'btn btn-default btn-xs' %>
+  
+app/views/doors/index.html.erb:23:in `block in _app_views_doors_index_html_erb___1845173248548400839_30592000'
+app/views/doors/index.html.erb:17:in `_app_views_doors_index_html_erb___1845173248548400839_30592000'
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:21:20 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.5ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (93.0ms)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 5.2ms)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.time.formats.default):
+    20:         <td><%= door.schedule %></td>
+    21:         <td><%= door.description %></td>
+    22:         <td><%= door.number %></td>
+    23:         <td><%=l door.created_at %></td>
+    24:         <td>
+    25:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    26:                       door_path(door), :class => 'btn btn-default btn-xs' %>
+  
+app/views/doors/index.html.erb:23:in `block in _app_views_doors_index_html_erb__1825519887668449452_34605820'
+app/views/doors/index.html.erb:17:in `_app_views_doors_index_html_erb__1825519887668449452_34605820'
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:21:24 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (21.2ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 13.1ms)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.time.formats.default):
+    20:         <td><%= door.schedule %></td>
+    21:         <td><%= door.description %></td>
+    22:         <td><%= door.number %></td>
+    23:         <td><%=l door.created_at %></td>
+    24:         <td>
+    25:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    26:                       door_path(door), :class => 'btn btn-default btn-xs' %>
+  
+app/views/doors/index.html.erb:23:in `block in _app_views_doors_index_html_erb__1825519887668449452_34526860'
+app/views/doors/index.html.erb:17:in `_app_views_doors_index_html_erb__1825519887668449452_34526860'
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:25:53 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  Rendered doors/index.html.erb within layouts/application (24.4ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (:"pt-BR" is not a valid locale):
+    1: <%- model_class = Door -%>
+    2: <div class="page-header">
+    3:   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+    4: </div>
+    5: <table class="table table-striped">
+    6:   <thead>
+  
+app/views/doors/index.html.erb:3:in `_app_views_doors_index_html_erb___2492230058725426249_38605540'
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:26:53 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.3ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (60.1ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.time.formats.default):
+    20:         <td><%= door.schedule %></td>
+    21:         <td><%= door.description %></td>
+    22:         <td><%= door.number %></td>
+    23:         <td><%=l door.created_at %></td>
+    24:         <td>
+    25:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    26:                       door_path(door), :class => 'btn btn-default btn-xs' %>
+  
+app/views/doors/index.html.erb:23:in `block in _app_views_doors_index_html_erb___1553252191233888976_29687280'
+app/views/doors/index.html.erb:17:in `_app_views_doors_index_html_erb___1553252191233888976_29687280'
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:26:57 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (26.3ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.time.formats.default):
+    20:         <td><%= door.schedule %></td>
+    21:         <td><%= door.description %></td>
+    22:         <td><%= door.number %></td>
+    23:         <td><%=l door.created_at %></td>
+    24:         <td>
+    25:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    26:                       door_path(door), :class => 'btn btn-default btn-xs' %>
+  
+app/views/doors/index.html.erb:23:in `block in _app_views_doors_index_html_erb___1553252191233888976_29542200'
+app/views/doors/index.html.erb:17:in `_app_views_doors_index_html_erb___1553252191233888976_29542200'
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:32:02 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (47.6ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.time.formats.default):
+    20:         <td><%= door.schedule %></td>
+    21:         <td><%= door.description %></td>
+    22:         <td><%= door.number %></td>
+    23:         <td><%=l door.created_at %></td>
+    24:         <td>
+    25:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    26:                       door_path(door), :class => 'btn btn-default btn-xs' %>
+  
+app/views/doors/index.html.erb:23:in `block in _app_views_doors_index_html_erb___1553252191233888976_27516700'
+app/views/doors/index.html.erb:17:in `_app_views_doors_index_html_erb___1553252191233888976_27516700'
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:32:28 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.3ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (54.8ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.time.formats.default):
+    20:         <td><%= door.schedule %></td>
+    21:         <td><%= door.description %></td>
+    22:         <td><%= door.number %></td>
+    23:         <td><%=l door.created_at %></td>
+    24:         <td>
+    25:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    26:                       door_path(door), :class => 'btn btn-default btn-xs' %>
+  
+app/views/doors/index.html.erb:23:in `block in _app_views_doors_index_html_erb__582894245085232104_43906160'
+app/views/doors/index.html.erb:17:in `_app_views_doors_index_html_erb__582894245085232104_43906160'
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:33:21 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 736ms (Views: 708.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:33:58 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 593ms (Views: 559.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:34:03 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 99ms (Views: 96.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:37:36 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.3ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 557ms (Views: 531.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:37:41 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 107ms (Views: 97.0ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:37:43 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 162ms (Views: 159.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:39:56 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.3ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (67.1ms)
+Completed 200 OK in 530ms (Views: 502.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:39:59 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.3ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 144ms (Views: 142.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:40:01 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 163ms (Views: 157.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 09:42:18 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.3ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (80.6ms)
+Completed 200 OK in 571ms (Views: 541.8ms | ActiveRecord: 1.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePeople (20170909132040)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "phone" varchar, "imagem" varchar, "office" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170909132040"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/people" for 127.0.0.1 at 2017-09-09 11:12:50 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 931ms (Views: 900.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2017-09-09 11:33:02 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 875ms (Views: 848.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2017-09-09 11:33:05 -0300
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (1.1ms)
+  Rendered people/new.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 19.4ms)
+
+
+  
+SyntaxError (/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...html => { :multipart => true }) do |f| @output_buffer.safe_a...
+...                               ^
+/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/people/new.html.erb:5:in `_app_views_people_new_html_erb__2730682397167090972_70093631933140'
+Started GET "/people/new" for 127.0.0.1 at 2017-09-09 11:34:00 -0300
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (1.3ms)
+  Rendered people/new.html.erb within layouts/application (18.2ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+...fer.append=  form_for (@person, :html => { :multipart => tru...
+...                               ^
+/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...html => { :multipart => true }) do |f| @output_buffer.safe_a...
+...                               ^
+/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/people/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/people/new.html.erb:5:in `_app_views_people_new_html_erb__2730682397167090972_70093543962400'
+Started GET "/people/new" for 127.0.0.1 at 2017-09-09 11:34:04 -0300
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (1.2ms)
+  Rendered people/new.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+...fer.append=  form_for (@person, :html => { :multipart => tru...
+...                               ^
+/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...html => { :multipart => true }) do |f| @output_buffer.safe_a...
+...                               ^
+/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/people/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/people/new.html.erb:5:in `_app_views_people_new_html_erb__2730682397167090972_70093633420360'
+Started GET "/people/new" for 127.0.0.1 at 2017-09-09 11:34:17 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.5ms)
+  Rendered people/new.html.erb within layouts/application (24.7ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+...fer.append=  form_for (@person, :html => { :multipart => tru...
+...                               ^
+/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...html => { :multipart => true }) do |f| @output_buffer.safe_a...
+...                               ^
+/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/people/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/people/new.html.erb:5:in `_app_views_people_new_html_erb__2247822886475395240_37628380'
+Started GET "/people/new" for 127.0.0.1 at 2017-09-09 11:34:21 -0300
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (1.1ms)
+  Rendered people/new.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+...fer.append=  form_for (@person, :html => { :multipart => tru...
+...                               ^
+/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...html => { :multipart => true }) do |f| @output_buffer.safe_a...
+...                               ^
+/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/people/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/people/new.html.erb:5:in `_app_views_people_new_html_erb__2247822886475395240_49214340'
+Started GET "/people/new" for 127.0.0.1 at 2017-09-09 11:34:26 -0300
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (8.6ms)
+  Rendered people/new.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+...fer.append=  form_for (@person, :html => { :multipart => tru...
+...                               ^
+/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...html => { :multipart => true }) do |f| @output_buffer.safe_a...
+...                               ^
+/home/marcia/qrPortasFabin/app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/people/_form.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/people/_form.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+app/views/people/_form.html.erb:64: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/people/new.html.erb:5:in `_app_views_people_new_html_erb__2247822886475395240_69993135897420'
+Started GET "/people/new" for 127.0.0.1 at 2017-09-09 11:34:37 -0300
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (37.9ms)
+  Rendered people/new.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 633ms (Views: 631.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/people/new" for 127.0.0.1 at 2017-09-09 11:35:20 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (56.7ms)
+  Rendered people/new.html.erb within layouts/application (92.8ms)
+Completed 200 OK in 918ms (Views: 865.5ms | ActiveRecord: 2.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoorPeople (20170909143914)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "door_people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "door_id" integer, "person_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c67edb4c9b"
+FOREIGN KEY ("door_id")
+  REFERENCES "doors" ("id")
+, CONSTRAINT "fk_rails_686f79fbea"
+FOREIGN KEY ("person_id")
+  REFERENCES "people" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_door_people_on_door_id" ON "door_people" ("door_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_door_people_on_door_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_door_people_on_door_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_door_people_on_person_id" ON "door_people" ("person_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170909143914"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_door_people_on_person_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_door_people_on_person_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_door_people_on_door_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_door_people_on_door_id' AND type='index'
+[0m
+Started GET "/door_people" for 127.0.0.1 at 2017-09-09 11:41:24 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorPeopleController#index as HTML
+  Rendering door_people/index.html.erb within layouts/application
+  [1m[36mDoorPerson Load (0.2ms)[0m  [1m[34mSELECT "door_people".* FROM "door_people"[0m
+  Rendered door_people/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 908ms (Views: 867.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/door_people/new" for 127.0.0.1 at 2017-09-09 11:41:32 -0300
+Processing by DoorPeopleController#new as HTML
+  Rendering door_people/new.html.erb within layouts/application
+  Rendered door_people/_form.html.erb (31.2ms)
+  Rendered door_people/new.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 164ms (Views: 135.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/door_people" for 127.0.0.1 at 2017-09-09 11:41:38 -0300
+Processing by DoorPeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PtZdvNLASoEKjO1LGl58ZdP9719f6QOpvh5pEQ1bqosRo/TzcgyQ+tZAtZCCT4A/jVnIvYXquqpspleuDOpb6Q==", "door_person"=>{"door_id"=>"1", "person_id"=>"1"}, "commit"=>"Create Door person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "door_people" ("door_id", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["door_id", 1], ["person_id", 1], ["created_at", "2017-09-09 14:41:38.599445"], ["updated_at", "2017-09-09 14:41:38.599445"]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 4.1ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed: INSERT INTO "door_people" ("door_id", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)):
+  
+app/controllers/door_people_controller.rb:30:in `block in create'
+app/controllers/door_people_controller.rb:29:in `create'
+Started GET "/door_people" for 127.0.0.1 at 2017-09-09 11:41:56 -0300
+Processing by DoorPeopleController#index as HTML
+  Rendering door_people/index.html.erb within layouts/application
+  [1m[36mDoorPerson Load (0.3ms)[0m  [1m[34mSELECT "door_people".* FROM "door_people"[0m
+  Rendered door_people/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 182ms (Views: 179.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 11:43:04 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (3.3ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (69.2ms)
+Completed 200 OK in 222ms (Views: 214.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2017-09-09 11:45:51 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 130ms (Views: 120.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2017-09-09 11:45:53 -0300
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (29.2ms)
+  Rendered people/new.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 164ms (Views: 137.7ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2017-09-09 11:46:06 -0300
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CRLznncO9j0CyRVEPj8nXh7JQkUPeMbhfF7t9NElxOkmZ1rR18IsRt4FTZ+mLtsEQG1lp9V7f+Ku5tNL0JQ1iw==", "person"=>{"name"=>"madma", "email"=>"dsmmd", "phone"=>"4224", "imagem"=>"aa", "office"=>"sffssf"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.7ms)[0m  [1m[32mINSERT INTO "people" ("name", "email", "phone", "imagem", "office", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "madma"], ["email", "dsmmd"], ["phone", "4224"], ["imagem", "aa"], ["office", "sffssf"], ["created_at", "2017-09-09 14:46:06.228858"], ["updated_at", "2017-09-09 14:46:06.228858"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/people/1
+Completed 302 Found in 36ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2017-09-09 11:46:06 -0300
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering people/show.html.erb within layouts/application
+  Rendered people/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 126ms (Views: 111.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2017-09-09 11:46:10 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.time.formats.default):
+    24:         <td><%= person.phone %></td>
+    25:         <td><%= person.imagem %></td>
+    26:         <td><%= person.office %></td>
+    27:         <td><%=l person.created_at %></td>
+    28:         <td>
+    29:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    30:                       person_path(person), :class => 'btn btn-default btn-xs' %>
+  
+app/views/people/index.html.erb:27:in `block in _app_views_people_index_html_erb__164581227491411455_69999228633300'
+app/views/people/index.html.erb:19:in `_app_views_people_index_html_erb__164581227491411455_69999228633300'
+Started GET "/people" for 127.0.0.1 at 2017-09-09 11:46:16 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.time.formats.default):
+    24:         <td><%= person.phone %></td>
+    25:         <td><%= person.imagem %></td>
+    26:         <td><%= person.office %></td>
+    27:         <td><%=l person.created_at %></td>
+    28:         <td>
+    29:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    30:                       person_path(person), :class => 'btn btn-default btn-xs' %>
+  
+app/views/people/index.html.erb:27:in `block in _app_views_people_index_html_erb__164581227491411455_69999278758300'
+app/views/people/index.html.erb:19:in `_app_views_people_index_html_erb__164581227491411455_69999278758300'
+Started GET "/people" for 127.0.0.1 at 2017-09-09 11:47:39 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (8.0ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 111ms (Views: 102.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/door_people" for 127.0.0.1 at 2017-09-09 11:47:58 -0300
+Processing by DoorPeopleController#index as HTML
+  Rendering door_people/index.html.erb within layouts/application
+  [1m[36mDoorPerson Load (0.2ms)[0m  [1m[34mSELECT "door_people".* FROM "door_people"[0m
+  Rendered door_people/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 123ms (Views: 122.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/door_people/new" for 127.0.0.1 at 2017-09-09 11:48:00 -0300
+Processing by DoorPeopleController#new as HTML
+  Rendering door_people/new.html.erb within layouts/application
+  Rendered door_people/_form.html.erb (2.3ms)
+  Rendered door_people/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 111ms (Views: 110.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/door_people" for 127.0.0.1 at 2017-09-09 11:48:09 -0300
+Processing by DoorPeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j1oEQ8yCydomM4mRLsIqzZITEOIOvUmF1hwVVmm4xsOgL60MbE4Tofr/0Uq209aXzLc3ANS+8IYEpCvpaAk3oQ==", "door_person"=>{"door_id"=>"1", "person_id"=>"1"}, "commit"=>"Create Door person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (16.4ms)[0m  [1m[32mINSERT INTO "door_people" ("door_id", "person_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["door_id", 1], ["person_id", 1], ["created_at", "2017-09-09 14:48:10.006134"], ["updated_at", "2017-09-09 14:48:10.006134"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/door_people/1
+Completed 302 Found in 43ms (ActiveRecord: 20.4ms)
+
+
+Started GET "/door_people/1" for 127.0.0.1 at 2017-09-09 11:48:10 -0300
+Processing by DoorPeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDoorPerson Load (1.4ms)[0m  [1m[34mSELECT  "door_people".* FROM "door_people" WHERE "door_people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering door_people/show.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered door_people/show.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 159ms (Views: 153.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/door_people" for 127.0.0.1 at 2017-09-09 11:48:13 -0300
+Processing by DoorPeopleController#index as HTML
+  Rendering door_people/index.html.erb within layouts/application
+  [1m[36mDoorPerson Load (0.2ms)[0m  [1m[34mSELECT "door_people".* FROM "door_people"[0m
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (2.9ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered door_people/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 110ms (Views: 105.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/door_people" for 127.0.0.1 at 2017-09-09 11:48:52 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorPeopleController#index as HTML
+  Rendering door_people/index.html.erb within layouts/application
+  [1m[36mDoorPerson Load (0.2ms)[0m  [1m[34mSELECT "door_people".* FROM "door_people"[0m
+  [1m[36mDoor Load (7.2ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered door_people/index.html.erb within layouts/application (135.3ms)
+Completed 200 OK in 772ms (Views: 726.5ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/door_people" for 127.0.0.1 at 2017-09-09 13:47:03 -0300
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorPeopleController#index as HTML
+  Rendering door_people/index.html.erb within layouts/application
+  [1m[36mDoorPerson Load (0.2ms)[0m  [1m[34mSELECT "door_people".* FROM "door_people"[0m
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered door_people/index.html.erb within layouts/application (151.1ms)
+Completed 200 OK in 855ms (Views: 811.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2017-09-09 16:05:02 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 991ms (Views: 904.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 16:12:02 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.1ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 136ms (Views: 124.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/door_people" for 127.0.0.1 at 2017-09-09 16:12:14 -0300
+Processing by DoorPeopleController#index as HTML
+  Rendering door_people/index.html.erb within layouts/application
+  [1m[36mDoorPerson Load (0.2ms)[0m  [1m[34mSELECT "door_people".* FROM "door_people"[0m
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered door_people/index.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 167ms (Views: 140.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/door_people" for 127.0.0.1 at 2017-09-09 16:14:26 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DoorPeopleController#index as HTML
+  Rendering door_people/index.html.erb within layouts/application
+  [1m[36mDoorPerson Load (0.2ms)[0m  [1m[34mSELECT "door_people".* FROM "door_people"[0m
+  Rendered door_people/index.html.erb within layouts/application (91.7ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.time.formats.default):
+    18:         <td><%= link_to door_person.id, door_person_path(door_person) %></td>
+    19:         <td><%= door_person.door_id %></td>
+    20:         <td><%= door_person.person_id %></td>
+    21:         <td><%=l door_person.created_at %></td>
+    22:         <td>
+    23:           <%= link_to t('.show', :default => t("helpers.links.show")),
+    24:                       door_person_path(door_person), :class => 'btn btn-default btn-xs' %>
+  
+app/views/door_people/index.html.erb:21:in `block in _app_views_door_people_index_html_erb__2154326745420267193_35318880'
+app/views/door_people/index.html.erb:16:in `_app_views_door_people_index_html_erb__2154326745420267193_35318880'
+Started GET "/door_people" for 127.0.0.1 at 2017-09-09 16:15:33 -0300
+Processing by DoorPeopleController#index as HTML
+  Rendering door_people/index.html.erb within layouts/application
+  [1m[36mDoorPerson Load (0.1ms)[0m  [1m[34mSELECT "door_people".* FROM "door_people"[0m
+  Rendered door_people/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 609ms (Views: 606.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/door_people/1/edit" for 127.0.0.1 at 2017-09-09 16:18:32 -0300
+Processing by DoorPeopleController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDoorPerson Load (0.2ms)[0m  [1m[34mSELECT  "door_people".* FROM "door_people" WHERE "door_people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering door_people/edit.html.erb within layouts/application
+  Rendered door_people/_form.html.erb (19.6ms)
+  Rendered door_people/edit.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 152ms (Views: 136.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/door_people" for 127.0.0.1 at 2017-09-09 16:18:34 -0300
+Processing by DoorPeopleController#index as HTML
+  Rendering door_people/index.html.erb within layouts/application
+  [1m[36mDoorPerson Load (0.2ms)[0m  [1m[34mSELECT "door_people".* FROM "door_people"[0m
+  Rendered door_people/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 118ms (Views: 115.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/door" for 127.0.0.1 at 2017-09-09 16:18:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/door"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 16:18:47 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 206ms (Views: 194.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/doors/1" for 127.0.0.1 at 2017-09-09 16:18:58 -0300
+Processing by DoorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT  "doors".* FROM "doors" WHERE "doors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering doors/show.html.erb within layouts/application
+  Rendered doors/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 209ms (Views: 196.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/doors" for 127.0.0.1 at 2017-09-09 16:19:05 -0300
+Processing by DoorsController#index as HTML
+  Rendering doors/index.html.erb within layouts/application
+  [1m[36mDoor Load (0.2ms)[0m  [1m[34mSELECT "doors".* FROM "doors"[0m
+  Rendered doors/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 157ms (Views: 154.6ms | ActiveRecord: 0.2ms)
+
+
