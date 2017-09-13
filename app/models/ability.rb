@@ -7,8 +7,7 @@ class Ability
       can :manage, :all
     elsif user.has_role? :user
       can :manage, Person 
-    else
-      can :read, :all
+
     end
     # Define abilities for the passed in user here. For example:
     #

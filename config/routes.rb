@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
+
   resources :door_people
   resources :people
   resources :doors
@@ -11,13 +12,14 @@ Rails.application.routes.draw do
       root 'home#index', as: :authenticated_root
     end
   
-    unauthenticated do
+    unauthenticated :user do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
   end
   
   get '/admin' => 'home#admin', as: :admin_home
   get '/user' => 'home#user', as: :user_home
+  get '/admin/door' => 'doors#new', as: :admin_new_door
 end
 
 
