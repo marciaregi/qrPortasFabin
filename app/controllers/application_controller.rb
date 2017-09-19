@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-
+ # before_action :configure_strong_params, if: :devise_controller?
   before_action :authenticate_user!
   
   def after_sign_in_path_for(resource)
@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
       unauthenticated_root_path
     end
   end
+
+  # def configure_strong_params
+  #   devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation,:doors_attributes => [:schedule, :description, :number])}
+  # end  
 end

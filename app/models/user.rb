@@ -5,7 +5,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-  belongs_to :person       
+  # has_one :door, :dependent => :destroy      
+  # accepts_nested_attributes_for :door
 
   after_create :assign_default_role
 
