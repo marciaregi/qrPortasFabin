@@ -15,6 +15,7 @@ class DoorsController < ApplicationController
   # GET /doors/new
   def new
     @door = Door.new
+  #  @door.build_user
   end
 
   # GET /doors/1/edit
@@ -69,6 +70,6 @@ class DoorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def door_params
-      params.require(:door).permit(:schedule, :description, :number)
+      params.require(:door).permit(:schedule, :description, :number)# user_attributes: [:email, :password, :password_confirmation])
     end
 end
